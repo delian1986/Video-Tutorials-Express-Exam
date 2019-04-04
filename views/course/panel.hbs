@@ -1,0 +1,69 @@
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h1>Create Course</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="text-center border border-light p-5" method="POST" action="/course/create">
+
+        <div class="md-form">
+          <input type="text" name="title" id="materialCreateCourseFormTitle" class="form-control">
+          <label for="materialCreateCourseFormTitle">Course Title</label>
+        </div>
+
+        <div class="md-form">
+          <textarea name="description" id="materialCreateCourseFormDescription" class="md-textarea form-control"
+            rows="3"></textarea>
+          <label for="materialCreateCourseFormDescription">Course Description</label>
+        </div>
+
+        <div class="md-form">
+          <input type="text" name="imageUrl" id="materialCreateCourseFormImageUrl" class="form-control">
+          <label for="materialCreateCourseFormImageUrl">Image Url</label>
+        </div>
+
+        <!-- Default unchecked -->
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" name="isListed" class="custom-control-input" id="materialCreateCourseFormIsListed">
+          <label class="custom-control-label" for="materialCreateCourseFormIsListed">Is Listed</label>
+        </div>
+
+        <button class="btn btn-default">Submit</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Create
+    Course</a>
+</div>
+
+{{#if courses}}
+<div class="border border-light p-5">
+  <h1 class="text-center">Choose Course</h1>
+  <div class="list-group">
+    {{#each courses}}
+    <li class="list-group-item ">
+      {{title}}
+      <div class="ml-auto float-right">
+        <div class="btn-group" role="group">
+          <a href="/course/edit/{{_id}}"><button type="button" class="btn btn-warning">Edit Course</button></a>
+          <a href="/lecture/add/{{_id}}"><button type="button" class="btn btn-success">Add lectures</button></a>
+        </div>
+        Lectures in course
+        <span class="badge badge-primary badge-pill">{{lectures.length}}</span>
+      </div>
+    </li>
+    {{/each}}
+  </div>
+</div>
+{{else}}
+<div class="text-center border border-light p-5">
+  <h1>No courses in database. Please create one!</h1>
+</div>
+{{/if}}

@@ -1,0 +1,37 @@
+<h1 class="text-center">All Courses</h1>
+<form class="form-inline md-form mr-auto mb-4" action="/course/search">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="needle" aria-label="Search">
+    <button class="btn btn-elegant btn-rounded btn-sm my-0" type="submit">Search</button>
+</form>
+{{#if courses}}
+<div class="container mt-3">
+    <div class="row">
+        <div class="card-deck">
+
+            {{#each courses}}
+            <div class="card mb-4">
+                <div class="view overlay">
+                    <img src={{imageUrl}} class="card-img-top" alt="">
+                    <div class="mask rgba-white-slight"></div>
+                </div>
+
+                <div class="card-body">
+                    <h4 class="card-title">{{title}}</h4>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/course/details/{{id}}"><button type="button" class="btn btn-info">Details</button></a>
+                </div>
+            </div>
+            <!-- /.card -->
+
+
+            {{/each}}
+        </div>
+    </div>
+</div>
+</div>
+
+{{else}}
+<h4>No Courses in database</h>
+    {{/if}}

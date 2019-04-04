@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Video tutorials</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Main Navigation-->
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark indigo">
+            <!-- Additional container -->
+            <div class="container">
+
+                <a class="navbar-brand" href="#">Video Tutorials</a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+                    <ul class="navbar-nav ml-auto float-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        {{#if user }}
+                        {{#if isUser}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/course/all">All Courses</a>
+                        </li>
+                        {{/if}}
+
+                        <li class="nav-link">
+                            Welcome, {{user.username}}
+                        </li>
+                        <li class="nav-item">
+                            <form id="logout-form" action="/user/logout" method="post"></form>
+                            <a class="nav-link"
+                                href="javascript:document.getElementById('logout-form').submit()">Logout</a>
+                        </li>
+
+                        {{else}}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/register">Register</a>
+                        </li>
+                        {{/if}}
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="mt-5">
+        <!--Main container-->
+        <div class="container">
+            {{{body}}}
+        </div>
+    </main>
+    <!-- Footer Links -->
+    <footer class="page-footer font-small indigo">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019
+            <a href="https://softuni.bg/trainings/2255/expressjs-fundamentals-january-2019">Express Fundamentals</a>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/js/mdb.min.js"></script>
+
+</body>
+
+
+
+</html>

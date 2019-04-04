@@ -1,0 +1,73 @@
+
+
+  <!--Grid row-->
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-md-7 mb-4">
+
+      <div class="view overlay z-depth-1-half">
+        <img src="\img\site\present-video.png" class="card-img-top" alt="">
+        <div class="mask rgba-white-light"></div>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-md-5 mb-4">
+
+      <h2>Video Tutorials</h2>
+      <hr>
+      <p>Software University offers a comprehensive software engineering program with the most sought-after software technologies, as well as the most up-to-date teaching practices. The syllabus of the Software University is carefully developed with the direct involvement of the IT companies.</p>
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+  <!--Grid row-->
+
+  <!--Grid row-->
+  {{#if courses}}
+  <h1 class="text-center">Top Courses</h1>
+  <div class="row">
+    {{#each courses}}
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src={{imageUrl}} class="card-img-top" alt="">
+            <div class="mask rgba-white-slight"></div>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">{{title}}</h4>
+          <!--Text-->
+          <p class="card-text">{{description}}</p>
+          {{#if ../user}}
+          <a href="/course/details/{{id}}"><button type="button" class="btn btn-info">Details</button></a>
+          {{else}}
+          <a href="/user/login"><button type="button" class="btn btn-info">Login</button></a>
+          {{/if}}
+        </div>
+
+      </div>
+      <!--/.Card-->
+
+    </div>
+    <!--Grid column-->
+    {{/each}}
+  </div>
+  <!--Grid row-->
+  {{else}}
+  <h4 class="text-center">No Courses in Database!</h4>
+
+  {{/if}}
+
+

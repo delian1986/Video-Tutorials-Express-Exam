@@ -1,0 +1,82 @@
+---------------------------------------------
+Angular
+https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png
+
+
+Intro to Angular
+https://www.youtube.com/embed/9RG3MiEBEIw
+
+Components
+https://www.youtube.com/embed/16rQyEQtpyQ
+
+Services
+https://www.youtube.com/embed/69VeYoKzL6I
+
+---------------------------------------------
+React
+https://cdn-images-1.medium.com/max/1200/1*3SVfBkNZI2f-sspiq59xcw.png
+
+Intro React
+https://www.youtube.com/embed/ycstRj2i66k
+
+Redux
+https://www.youtube.com/embed/93p3LxR9xfM
+
+Router
+https://www.youtube.com/embed/91F8reC8kvo
+
+
+---------------------------------------------
+Express
+https://cdn-images-1.medium.com/max/1000/1*alZcSIb0lcN7gQIx2tJ_tg.png
+
+Conrollers
+https://www.youtube.com/embed/ucuNgSOFDZ0
+
+Routing
+https://www.youtube.com/embed/tiMLxUKrB-g
+
+Achitecture
+https://www.youtube.com/embed/pKd0Rpw7O48
+
+---------------------------------------------
+Symfony
+https://d1pwix07io15pr.cloudfront.net/v9b2c58a2d6/images/opengraph/symfony.png
+
+MVC
+https://www.youtube.com/embed/th0a26C9qB0
+
+Routing
+https://www.youtube.com/embed/aiLfp65Fq8I
+
+Services
+https://www.youtube.com/embed/XTY6rzf4PNw
+---------------------------------------------
+
+Spring MVC
+https://javainterviewpoint-7ac9.kxcdn.com/wp-content/uploads/2019/02/Spring-MVC-Tutorial.png
+
+Annotation based controller class
+https://www.youtube.com/embed/HokftiwyUuU
+
+Form Validation
+https://www.youtube.com/embed/nI-Qx06XRA8
+
+Web Services
+https://www.youtube.com/embed/1A3HnWzw8Ao
+
+---------------------------------------------
+
+ASP.NET
+https://ardalis.com/wp-content/uploads/2017/05/aspnetcore-logo-591x360.png
+
+Web APIs
+https://www.youtube.com/embed/aIkpVzqLuhA
+
+
+---------------------------------------------
+
+
+
+
+

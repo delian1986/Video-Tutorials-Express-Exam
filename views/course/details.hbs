@@ -19,20 +19,17 @@
     </div>
 
     {{#if enrolled}}
-    <div class="list-container">
-    <h2 class="text-center">Lectures List</p>
     <ul class="list-group">
+         <h3 class="text-center">Lectures List</h3>
         {{#each course.lectures}}
         <li class="list-group-item">
             <h5 class="mb-1">{{title}}</h5>
             <span class="float-right">
                 <a href="/course/{{course}}/lecture/{{_id}}"><button class="btn btn-secondary">Play</button></a>
-
             </span>
             {{/each}}
         </li>
     </ul>
-    </div>
     {{else}}
     <h4 class="text-center">To get full access please enroll the course</h4>
     {{/if}}

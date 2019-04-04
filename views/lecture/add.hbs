@@ -26,24 +26,27 @@
     </div>
 </div>
 
-<div class="text-center">
-    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Add
-        Lecture</a>
+<div class="list-container">
+    <div class="text-center">
+        <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Add
+            Lecture</a>
+    </div>
+
+    {{#if lectures}}
+
+    <h2 class="text-center">No Lectures in this course</h2>
+    {{else}}
+    <h2 class="text-center">There are {{course.lectures.length}} lectures in this course</h2>
+
+    <ul class="list-group">
+        {{#each course.lectures}}
+        <li class="list-group-item">
+            <h5 class="mb-1">{{title}}</h5>
+            <span class="float-right">
+                <a href="/lecture/delete/{{_id}}"><button class="btn btn-danger">Delete</button></a>
+            </span>
+            {{/each}}
+        </li>
+    </ul>
 </div>
-
-{{#if lectures}}
-<h2 class="text-center">No Lectures in this course</h2>
-{{else}}
-<h2 class="text-center">There are {{course.lectures.length}} lectures in this course</h2>
-
-<ul class="list-group">
-    {{#each course.lectures}}
-    <li class="list-group-item">
-        <h5 class="mb-1">{{title}}</h5>
-        <span class="float-right">
-            <a href="/lecture/delete/{{_id}}"><button class="btn btn-danger">Delete</button></a>
-        </span>
-        {{/each}}
-    </li>
-    {{/if}}
-</ul>
+{{/if}}

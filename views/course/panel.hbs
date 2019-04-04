@@ -44,22 +44,25 @@
 </div>
 
 {{#if courses}}
-<div class="border border-light p-5">
-  <h1 class="text-center">Choose Course</h1>
-  <div class="list-group">
-    {{#each courses}}
-    <li class="list-group-item ">
-      {{title}}
-      <div class="ml-auto float-right">
-        <div class="btn-group" role="group">
-          <a href="/course/edit/{{_id}}"><button type="button" class="btn btn-warning">Edit Course</button></a>
-          <a href="/lecture/add/{{_id}}"><button type="button" class="btn btn-success">Add lectures</button></a>
+<div class="list-container">
+
+  <div class="border border-light p-5">
+    <h1 class="text-center">Choose Course</h1>
+    <div class="list-group">
+      {{#each courses}}
+      <li class="list-group-item ">
+        {{title}}
+        <div class="ml-auto float-right">
+          <div class="btn-group" role="group">
+            <a href="/course/edit/{{_id}}"><button type="button" class="btn btn-warning">Edit Course</button></a>
+            <a href="/lecture/add/{{_id}}"><button type="button" class="btn btn-success">Add lectures</button></a>
+          </div>
+          Lectures in course
+          <span class="badge badge-primary badge-pill">{{lectures.length}}</span>
         </div>
-        Lectures in course
-        <span class="badge badge-primary badge-pill">{{lectures.length}}</span>
-      </div>
-    </li>
-    {{/each}}
+      </li>
+      {{/each}}
+    </div>
   </div>
 </div>
 {{else}}

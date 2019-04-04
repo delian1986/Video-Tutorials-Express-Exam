@@ -19,7 +19,8 @@
     </div>
 
     {{#if enrolled}}
-    <h3 class="text-center">Lectures List</h3>
+    <div class="list-container">
+    <h2 class="text-center">Lectures List</p>
     <ul class="list-group">
         {{#each course.lectures}}
         <li class="list-group-item">
@@ -31,6 +32,7 @@
             {{/each}}
         </li>
     </ul>
+    </div>
     {{else}}
     <h4 class="text-center">To get full access please enroll the course</h4>
     {{/if}}

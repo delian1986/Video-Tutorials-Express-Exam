@@ -7,3 +7,23 @@
     height: 15vw;
     object-fit: cover;
 }
+
+.list-container{
+    margin: 20px;
+}
+.list-group{
+    margin-top: 20px;
+}
+
+.btn-group{
+    margin-right: 10px;
+}
+
+.badge{
+    margin-left: 10px;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+   z-index:9999999;}

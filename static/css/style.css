@@ -26,4 +26,6 @@
 footer {
     bottom: 0;
     width: 100%;
-   z-index:9999999;}
+    margin-top: 5em;
+   z-index:9999999;
+}

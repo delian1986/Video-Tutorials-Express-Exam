@@ -23,6 +23,10 @@
     margin-left: 10px;
 }
 
+.not-enrolled{
+    margin: 5em;
+}
+
 footer {
     bottom: 0;
     width: 100%;
